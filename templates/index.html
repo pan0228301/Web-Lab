@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% block title %}在线演训实验室{%endblock%}
+
+{% block css  %}
+
+	.carousel-inner img {
+	    width:100%;
+	}
+    
+{% endblock %}
+
+{% block content %}
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" style="text-align:center">
+        <div class="item active">
+		<div class="jumbotron">
+			<h1>网络安全</h1>
+			<p>没有网络安全就没有国家安全，没有信息化就没有现代化</p>
+		</div>
+        </div>
+        <div class="item">
+
+		<div class="jumbotron">
+			<h1>日常训练</h1>
+			<p>没有网络安全就没有国家安全，没有信息化就没有现代化</p>
+		</div>
+        </div>
+        <div class="item">
+
+		<div class="jumbotron">
+			<h1>实战演练</h1>
+			<p>没有网络安全就没有国家安全，没有信息化就没有现代化</p>
+		</div>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+      </a>
+      <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+      </a>
+    </div>
+
+
+
+
+
+<div class="container layout-margin-top layout-noside">
+    <div class="row">
+        <div class="col-md-12 layout-body">
+            <div class="learn-path-list" style="margin-bottom: 40px;">
+
+                <div class="col-sm-3">
+                    <a class="learn-path-item" href="./content/10177">
+                        <img src="/static/assets/images/1487741005890.png">
+                        <div class="learn-path-name">新手入门</div>
+                        <div class="learn-path-courses">
+                            6门课程
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-sm-3">
+                    <a class="learn-path-item" href="">
+                        <img src="/static/assets/images/1487741028787.png">
+                        <div class="learn-path-name">Python研发工程师</div>
+                        <div class="learn-path-courses">
+                            89门课程
+                        </div>
+                        <div class="learn-path-hot">
+                            <img src="/static/assets/images/path_hot.png" alt="">
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-sm-3">
+                    <a class="learn-path-item" href="">
+                        <img src="/static/assets/images/1487741048998.png">
+                        <div class="learn-path-name">C++ 研发工程师</div>
+                        <div class="learn-path-courses">
+                            27门课程
+                        </div>
+                        <div class="learn-path-hot">
+                            <img src="/static/assets/images/path_hot.png" alt="">
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-sm-3">
+                    <a class="learn-path-item" href="">
+                        <img src="/static/assets/images/1487741070013.png">
+                        <div class="learn-path-name">大数据工程师</div>
+                        <div class="learn-path-courses">
+                            44门课程
+                        </div>
+                        <div class="learn-path-hot">
+                            <img src="/static/assets/images/path_hot.png" alt="">
+                        </div>
+                    </a>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+        
+    

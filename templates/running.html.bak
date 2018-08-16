@@ -1,0 +1,320 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+
+    <title>实验楼</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/static/assets/images/favicon.ico">
+    <link rel="stylesheet" href="/static/assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/assets/css/styles.css">
+    <style>
+        .home-header {
+            background: #fff none repeat scroll 0 0;
+            border-width: 0;
+            box-shadow: 0 0 4px 0 #ccc;
+        }
+        .home-header .navbar-nav > li {
+            position: relative;
+        }
+        .home-header .navbar-nav > li > a {
+            color: #666;
+            font-size: 16px;
+        }
+        .home-header .navbar-nav > li, .home-header .navbar-nav > li.active > a, .home-header .navbar-nav > li.active > a:focus, .home-header .navbar-nav > li.active > a:hover, .home-header .navbar-nav > li > a:focus, .home-header .navbar-nav > li > a:hover {
+            background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+            color: #08bf91;
+        }
+
+        .home-header .navbar-brand {
+            height: 70px;
+            padding: 5px 0;
+        }
+        .home-header .navbar-brand img {
+            height: 100%;
+        }
+        .home-header .header-sign .sign-in {
+            color: #666;
+        }
+        .home-header .header-sign .sign-in > a:hover {
+            background: #aaa none repeat scroll 0 0;
+            color: #666;
+        }
+        .home-header .header-sign .sign-up {
+            background: #08bf91 none repeat scroll 0 0;
+            color: #fff;
+        }
+        .home-header .header-sign .sign-in, .home-header .header-sign .sign-up {
+            padding: 25px;
+        }
+
+        .home-header .navbar-nav {
+            padding: 10px 0;
+        }
+        .home-header .header-sign {
+            padding: 0;
+        }
+        .home-header .navbar-nav > li > a {
+            color: #666;
+            font-size: 16px;
+        }
+
+        .home-header .navbar-form {
+            margin: 0;
+            padding: 17.5px 10px;
+        }
+        .home-header .navbar-form .form-group {
+            position: relative;
+        }
+        .home-header .navbar-form .form-group label {
+            color: #666;
+            cursor: pointer;
+            font-size: 16px;
+            position: absolute;
+            right: 10px;
+            top: 6px;
+            z-index: 9;
+        }
+        .form-group label {
+            display: block;
+        }
+        .home-header .navbar-form .form-group .form-control {
+            border-radius: 20px;
+            height: 35px;
+            padding-right: 35px;
+        }
+        .form-group .form-control {
+            border-radius: 0;
+        }
+        i {
+            margin-right: 4px;
+        }
+
+        .learn-path-banner {
+            background: rgba(0, 0, 0, 0) url("/static/assets/images/path_bg.png") no-repeat scroll 50% 0;
+            height: 340px;
+            margin-bottom: -30px;
+            margin-top: 70px;
+        }
+        .layout-hasside, .layout-noside {
+            margin-bottom: -263px;
+            margin-top: 90px;
+            min-height: 100%;
+        }
+        .layout-hasside::after, .layout-noside::after {
+            content: "";
+            display: block;
+            height: 263px;
+        }
+        .footer {
+            background: #333 none repeat scroll 0 0;
+            padding-top: 20px;
+        }
+        .footer-col .footer-slogan {
+            color: #0c9;
+            font-size: 28px;
+            margin: 0 0 12px 15px;
+        }
+        .copyright {
+            background: #171919 none repeat scroll 0 0;
+            color: #666;
+            height: 50px;
+            line-height: 50px;
+            margin-top: 20px;
+        }
+        .footer-col .col-title {
+            color: hsla(0, 0%, 100%, 0.5);
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .footer-col {
+            min-height: 150px;
+        }
+        .footer-col a {
+            color: #999;
+            display: inline-block;
+            font-size: 14px;
+            margin-bottom: 3px;
+        }
+    </style>
+    <script src="/static/assets/js/jquery.min.js"></script>
+    <script src="/static/assets/js/myjq.js"></script>
+</head>
+<body>
+<div id="lab-console" style="">
+    
+    <div id="lab-container" style="display: block; width: 30%;" >
+        <div class="desktop-toggle" style="display: block;">
+            <span class="show-desktop">显示桌面</span>
+            <span class="hide-desktop">隐藏桌面</span>
+        </div>
+        <div class="lab-nav-container">
+            <div class="tabs-hover" style="left: 58px;"></div>
+            <ul role="tablist" class="nav nav-tabs">
+                <li>
+
+                    <a href="/courses/9" class="btn btn-primary">
+                        <i class="fa fa-arrow-circle-left"></i>
+                    </a>
+
+                </li>
+                <li class="active" role="presentation">
+                    <a data-toggle="tab" role="tab" aria-controls="labdoc" data-stat="console_doc" class="stat-event" href="#labdoc">实验文档</a>
+                </li>
+
+                <li role="presentation">
+                    <a data-toggle="tab" role="tab" aria-controls="report" data-stat="console_report" class="stat-event" href="#report">实验报告</a>
+                </li>
+                <a data-toggle="modal" class="pull-right btn btn-default btn-askquestion" href="#askquestion">
+                    <i class="fa fa-question-circle"></i> 我要提问
+                </a>
+            </ul>
+        </div>
+        <div class="container tab-content">
+            <div id="labdoc" class="tab-pane active" role="tabpanel">
+
+                <div class="labdoc-msg" style="display: inline-block;">
+                    <div role="alert" class="alert alert-warning alert-dismissible msg1" style="">
+                        <button aria-label="Close" data-dismiss="alert" class="close" type="button">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                        <i class="fa fa-lightbulb-o fa-2x"></i>
+                        <strong style="vertical-align: super;">[新手任务]</strong>
+                        <span style="vertical-align: super;">发布一篇实验报告获得大家点评。</span>
+                    </div>
+                </div>
+
+                <div class="labdoc-sections">
+                    <h2>基础篇 - SQL 介绍及 MySQL 安装</h2>
+                    <nav id="document-navbar" class="navbar">
+                        <ul class="nav navbar-nav">
+                            <li style="width: 25%;">
+                                <a data-title="一、实验介绍" data-placement="top" data-stat="console_step" data-toggle="tooltip" href="#doc-section-0" class="stat-event" data-original-title="" title=""></a>
+                            </li>
+                            <li style="width: 25%;">
+                                <a data-title="二、实验步骤" data-placement="top" data-stat="console_step" data-toggle="tooltip" href="#doc-section-1" class="stat-event" data-original-title="" title=""></a>
+                            </li>
+                            <li style="width: 25%;">
+                                <a data-title="三、实验总结" data-placement="top" data-stat="console_step" data-toggle="tooltip" href="#doc-section-2" class="stat-event" data-original-title="" title=""></a>
+                            </li>
+                            <li style="width: 25%;">
+                                <a data-title="四、课后习题" data-placement="top" data-stat="console_step" data-toggle="tooltip" href="#doc-section-3" class="stat-event" data-original-title="" title=""></a>
+                            </li>
+                            <div class="sections-line" style="position: absolute; top: 7px; width: 75%; height: 1px; margin-left: 12.5%; background: rgb(153, 153, 153) none repeat scroll 0% 0%;"></div>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="labdoc-preview">
+                    <div id="labdoc-content" class="labdoc-content markdown-body">
+                        <h1 id="sql-mysql-">SQL的介绍及MySQL的安装</h1>
+                        <h2 id="doc-section-0">一、实验介绍</h2>
+                        <p>本课程为实验楼提供的 MySQL 实验教程，所有的步骤都在实验楼在线实验环境中完成，学习中请按照实验步骤依次操作。</p>
+                        <p>课程包含两部分，共17个实验：</p>
+                        <ol>
+                            <li>实验1～实验6：基础部分，为 SQL 基本语法及 MySQL 基本操作的实验，理论内容较少，动手实践多，可以快速上手 SQL 及 MySQL 服务。</li>
+                            <li>实验7～实验17：进阶部分，该部分内容基于 MySQL 参考手册 翻译制作，包含大量的理论知识和进阶使用方法，有的并不常见，可以根据工作需要进行学习。</li>
+                        </ol>
+                        <div class="labdoc-btns" style="margin-bottom: 77px;">
+                            <a data-toggle="modal" class="btn btn-danger" href="#stop-lab-modal">
+                                <i class="fa fa-stop"></i>
+                                停止实验
+                            </a>
+                            <a data-toggle="modal" class="btn btn-success" href="#next-lab-modal">
+                                <i class="fa fa-step-forward"></i>
+                                下一个实验
+                            </a>
+                        </div>
+                    </div>
+                    <a class="btn btn-danger btn-err-correction" href="#askquestion">
+                        <i class="fa fa-arrow-circle-left"></i> 纠错
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--虚拟桌面 start-->
+    <div id="" style="">
+        <div id="display" style="width: 70%;background-color:#0c9; display: inline-block;">
+            <div style="position: relative; width: 100%; height: 614px;">
+                <div style="position: relative; width: 100%; height: 768px; transform-origin: 0px 0px 0px; transform: scale(0.799479, 0.799479);">
+                    <div style="width: 100%; height: 768px; position: absolute; left: 0px; top: 0px; overflow: hidden;background-color:#0c9;">
+                        <canvas width="1024" height="768" style="z-index: -1; position: absolute; left: 0px; top: 0px;"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="/static/assets/images/linux.jpg" style="background-image: url(/static/assets/images/linux.jpg) no-repeat; background-size: 100% 100%;"/>
+    </div>
+    <!--虚拟桌面 end-->
+
+    <div id="tools" style="right: 0px;">
+        <div class="tools-toggle">
+            <span class="show-tools" style="display: none;">显示工具栏</span>
+            <span class="hide-tools" style="display: inline-block;">隐藏工具栏</span>
+        </div>
+        <div class="lefttime">
+            <span>53:54</span>
+            <a data-toggle="modal" class="increase-time-btn btn btn-default" href="#increase-time-modal">延时</a>
+        </div>
+        <div class="tools-divide"></div>
+        <div class="vm-mode-select">
+            <a class="btn btn-defualt" style="display: block;">
+                <i class="fa fa-random"></i> 切换界面
+            </a>
+            <div class="vm-modes">
+                <a class="btn stat-event active" data-mode="desktop" data-stat="conosle_mode">
+                    <i class="fa fa=desktop"></i> 图形界面
+                </a>
+                <a class="btn stat-event" data-mode="ssh" data-stat="conosle_mode">
+                    <i class="fa fa=terminal"></i> 字符界面
+                </a>
+            </div>
+            <a class="show-modes"><i class="fa fa-angle-left"></i></a>
+        </div>
+        <div class="tools-divide"></div>
+
+        <a data-toggle="modal" class="stop-lab-btn btn btn-default" href="#stop-lab-modal" style="display: block;"><i class="fa fa-stop"></i> 停止实验</a>
+        <a data-toggle="modal" class="next-lab-btn btn btn-default" href="#next-lab-modal" style="display: block;"><i class="fa fa-step-forward"></i> 下个实验</a>
+        <div class="tools-divide"></div>
+        <span style="display: inline-block;" id="tools-vmtools">
+            <a data-stat="console_clipboard" data-toggle="modal" class="clipboard-btn stat-event btn btn-default" href="#clipboard-modal" style="display: block;"><i class="fa fa-cut"></i> 剪切板</a>
+            <a data-toggle="modal" class="share-desktop-btn btn btn-default" href="#share-desktop-modal" style="display: block;"><i class="fa fa-share-alt"></i> 共享桌面</a>
+            <a data-toggle="modal" class="download-code-btn btn btn-default" href="#download-code-modal" style="display: block;"><i class="fa fa-download"></i> 下载代码</a>
+            <a class="stat-event btn btn-default fullscreen-btn" data-stat="console_fullscreen" href="#" style="display: block;"><i class="fa fa-arrows-alt"></i> 桌面全屏</a>
+            <span></span>
+        </span>
+
+        <a data-toggle="modal" data-stat="console_webide" class="btn btn-default webide stat-event" target="_blank" href="#webide-modal" style="display: none;">
+            <img src=" "> WebIDE
+        </a>
+        <a data-toggle="modal" data-stat="console_ssh" class="ssh-btn stat-event btn btn-default" href="#ssh-modal" style="display: block;">
+            <img src=" "> SSH 直连
+        </a>
+        <a data-toggle="modal" class="btn btn-default save-vm-btn" target="_blank" href="#save-vm-modal" style="display: block;">
+            <img src=" "> 保存环境
+        </a>
+        <a class="btn btn-default faq-btn" target="_blank" href=" "><i class="fa fa-question-circle-o fa-2x"></i></a>
+    </div>
+
+
+
+</div>
+    
+
+  
+
+       <!-- <div class="showTimeOut" style="display: none; position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; background: rgba(0, 0, 0, 0.8) none repeat scroll 0% 0%; text-align: center; z-index: 1600;">
+            <i class="fa fa-spinner fa-pulse" style="margin-top: 32.8px; color: rgb(255, 255, 255); font-size: 35px;"></i>
+        </div>
+       <div id="message-box"></div>
+    <script>
+
+            setTimeout(function() {
+                $('.labdoc-content').trigger('DOMSubtreeModified');
+            }, 100);
+    </script>-->
+
+</body>
+</html>
